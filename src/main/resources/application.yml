@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: accounts
+  profiles:
+    active: production
+  datasource:
+    url: jdbc:mysql://localhost:3306/accountsapp?serverTimezone=Europe/Warsaw&userSSL=False
+    username: admin
+    password: admin
+    ddl-mode: update
+managment:
+  endoints:
+    web:
+      explosure:
+        include: "*"
+
+application:
+  allow-get-accounts: ${accounts.allow-get-accounts}
+info:
+  app:
+    name: "Accounts"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
+
