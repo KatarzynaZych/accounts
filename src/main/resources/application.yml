@@ -16,6 +16,10 @@ info:
     port: ${server.port}
 
 management:
+  info:
+    env:
+      enabled: true
+
   endpoints:
     web:
       exposure:
