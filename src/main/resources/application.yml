@@ -30,3 +30,10 @@ eureka:
 
 application:
   allow-get-accounts: ${accounts.allow-get-accounts}
+
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 9999

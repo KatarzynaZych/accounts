@@ -13,7 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 @Slf4j
 @RefreshScope
 @RestController
-@RequestMapping("/v1/")
+@RequestMapping("/v1/accounts")
 public class AccountsController {
 
     @Value("${application.allow-get-accounts}")
@@ -25,9 +25,9 @@ public class AccountsController {
     @Autowired
     AccountMapper accountMapper;
 
-    @RequestMapping(value = "/accounts", method = RequestMethod.GET)
-    @ResponseBody
-    public GetAccountsResponse getCustomerAccounts(@RequestParam Long customerId) {
+    @GetMapping
+    public GetAccountsResponse getCustomerAccounts(@RequestParam("customerId") Long customerId) {
+        log.info("Get account for customer id {}", customerId);
         if (!allowGetAccounts) {
             log.info("GETTING ACCOUNTS IS DISABLED");
             throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE, "Getting accounts is disabled");
