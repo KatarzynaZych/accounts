@@ -1,6 +1,7 @@
 package com.kodilla.accounts.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +20,7 @@ import javax.persistence.OneToOne;
 @NoArgsConstructor
 @Getter
 @Entity(name = "account")
+@Builder
 public class Account {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
