@@ -47,7 +47,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
-	implementation 'junit:junit:4.13.1'
+	implementation 'junit:junit:4.13.2'
 
 
 	runtimeOnly 'mysql:mysql-connector-java'
@@ -71,7 +71,7 @@ dependencyManagement {
 
 contracts {
 	testFramework = TestFramework.JUNIT5
-	packageWithBaseClasses = 'com.accounts'
+	packageWithBaseClasses = 'com.kodilla.accounts'
 }
 
 test {
