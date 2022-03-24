@@ -29,7 +29,8 @@ eureka:
   client: ${eureka-client}
 
 application:
-  allow-get-accounts: ${accounts.allow-get-accounts}
+  allow-get-accounts: true
+ # allow-get-accounts: true ${accounts.allow-get-accounts}
 
 feign:
   hystrix:

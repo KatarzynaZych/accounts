@@ -18,5 +18,9 @@ public class DbService {
 	public List<Account> getAccountsByCustomerId(long customerId){
 		return accountRepository.findByCustomerId(customerId);
 	}
+
+	public Account getAccountsByCustomerNrb(String nrb){
+		return accountRepository.findByNrb(nrb);
+	}
 }
 

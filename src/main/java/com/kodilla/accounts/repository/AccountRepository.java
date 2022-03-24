@@ -14,5 +14,5 @@ public interface AccountRepository extends CrudRepository<Account, Long> {
 
 	List<Account> findByCustomerId(Long id);
 
-	List<Account> findAllByCustomerId(Long id);
+	Account findByNrb(String nrb);
 }
